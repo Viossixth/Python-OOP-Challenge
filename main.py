@@ -35,8 +35,12 @@ class pet :
         self.hunger = (self.hunger+1)
         #print(f"{self.name} has a playfulness level of:{self.aftermeal}")
 
-    #Here is the status 
-    
+    #Here is the status
+
+    def train(self, trick):
+        self.tricks.append(trick)
+        print(f"{self.name} learned a new trick: {trick}!")
+
     def show_status(self):
         self.status = (self.energy);(self.hunger);(self.happiness)
         print(f"{self.name} has a {self.hunger} level of hunger, {self.energy} level of energy and a {self.happiness} level of happiness")
@@ -52,5 +56,9 @@ my_pet.show_status()
 my_pet.aftermeal()
 my_pet.sleep_level()
 my_pet.playfulness()
+my_pet.train("sit")
+my_pet.train("roll over")
+my_pet.train("fetch")
+my_pet.train("shake paw")
 my_pet.show_tricks()
 my_pet.show_status()
